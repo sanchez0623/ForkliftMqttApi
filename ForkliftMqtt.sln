@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt", "ForkliftMqtt\ForkliftMqtt.csproj", "{47B83456-8C6D-4B10-9279-F740D029DFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Application", "ForkliftMqtt.Application\ForkliftMqtt.Application.csproj", "{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Domain", "ForkliftMqtt.Domain\ForkliftMqtt.Domain.csproj", "{35382CF1-931C-48F0-BB6F-CE72375F1DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Infrastructure", "ForkliftMqtt.Infrastructure\ForkliftMqtt.Infrastructure.csproj", "{D5521963-A1A3-4F01-9886-1146480D34A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Tests", "ForkliftMqtt.Tests\ForkliftMqtt.Tests.csproj", "{B7D87B6E-1857-4B08-9540-34CFB76E412C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47B83456-8C6D-4B10-9279-F740D029DFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B83456-8C6D-4B10-9279-F740D029DFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B83456-8C6D-4B10-9279-F740D029DFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B83456-8C6D-4B10-9279-F740D029DFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5521963-A1A3-4F01-9886-1146480D34A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5521963-A1A3-4F01-9886-1146480D34A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5521963-A1A3-4F01-9886-1146480D34A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5521963-A1A3-4F01-9886-1146480D34A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D87B6E-1857-4B08-9540-34CFB76E412C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D87B6E-1857-4B08-9540-34CFB76E412C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D87B6E-1857-4B08-9540-34CFB76E412C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D87B6E-1857-4B08-9540-34CFB76E412C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57047EE6-879D-4F53-A736-3C23D5FB0838}
+	EndGlobalSection
+EndGlobal
