@@ -2,6 +2,8 @@
 
 ## 整体项目结构
 
+### 架构特点：采用清晰的分层架构，结合CQRS模式和领域驱动设计，通过基础设施层实现具体技术细节的解耦。API层保持精简，业务逻辑集中在应用层，领域模型保持技术无关性。
+
 项目结构
 
 ForkliftMqtt.sln  
@@ -14,7 +16,7 @@ ForkliftMqtt.sln
 └── ForkliftMqtt.Tests/ - 单元测试项目  
 
 ## 1. API层 (ForkliftMqtt.Api)
-```markdown
+
 ### 核心组件
 - **Controllers/**
   - SensorsController.cs    - 传感器数据API
@@ -37,24 +39,24 @@ ForkliftMqtt.sln
 
 1. ForkliftMqtt.Api
 
-ForkliftMqtt.Api/
-├── Controllers/
-│   ├── SensorsController.cs
-│   └── ForkliftController.cs
-├── Middleware/
-│   ├── ExceptionHandlingMiddleware.cs
-│   └── RequestLoggingMiddleware.cs
-├── Models/
-│   ├── ErrorResponse.cs
-│   └── ApiResponse.cs
-├── Extensions/
-│   └── ServiceCollectionExtensions.cs
-├── Properties/
-│   └── launchSettings.json
-├── appsettings.json
-├── appsettings.Development.json
-├── Program.cs
-└── ForkliftMqtt.Api.csproj
+ForkliftMqtt.Api/  
+├── Controllers/  
+│   ├── SensorsController.cs  
+│   └── ForkliftController.cs  
+├── Middleware/  
+│   ├── ExceptionHandlingMiddleware.cs  
+│   └── RequestLoggingMiddleware.cs  
+├── Models/  
+│   ├── ErrorResponse.cs  
+│   └── ApiResponse.cs  
+├── Extensions/  
+│   └── ServiceCollectionExtensions.cs  
+├── Properties/  
+│   └── launchSettings.json  
+├── appsettings.json  
+├── appsettings.Development.json  
+├── Program.cs  
+└── ForkliftMqtt.Api.csproj  
 
 2. ForkliftMqtt.Application
 
@@ -128,29 +130,29 @@ ForkliftMqtt.Application/
 - **领域服务**
   - ISensorDataService.cs  - 传感器数据处理服务接口
 
-ForkliftMqtt.Domain/
-├── Entities/
-│   ├── ForkliftSensor.cs
-│   └── Forklift.cs
-├── ValueObjects/
-│   ├── SensorReading.cs
-│   └── Location.cs
-├── Enums/
-│   ├── SensorType.cs
-│   └── ForkliftStatus.cs
-├── Events/
-│   ├── SensorDataReceivedEvent.cs
-│   └── ForkliftStatusChangedEvent.cs
-├── Exceptions/
-│   ├── DomainException.cs
-│   └── SensorNotFoundException.cs
-├── Repositories/
-│   ├── ISensorRepository.cs
-│   ├── ISensorReadingRepository.cs
-│   └── IForkliftRepository.cs
-├── Services/
-│   └── ISensorDataService.cs
-└── ForkliftMqtt.Domain.csproj
+ForkliftMqtt.Domain/  
+├── Entities/  
+│   ├── ForkliftSensor.cs  
+│   └── Forklift.cs  
+├── ValueObjects/  
+│   ├── SensorReading.cs  
+│   └── Location.cs  
+├── Enums/  
+│   ├── SensorType.cs  
+│   └── ForkliftStatus.cs  
+├── Events/  
+│   ├── SensorDataReceivedEvent.cs  
+│   └── ForkliftStatusChangedEvent.cs  
+├── Exceptions/  
+│   ├── DomainException.cs  
+│   └── SensorNotFoundException.cs  
+├── Repositories/  
+│   ├── ISensorRepository.cs  
+│   ├── ISensorReadingRepository.cs  
+│   └── IForkliftRepository.cs  
+├── Services/  
+│   └── ISensorDataService.cs  
+└── ForkliftMqtt.Domain.csproj  
 
 4. ForkliftMqtt.Infrastructure
 
@@ -169,27 +171,27 @@ ForkliftMqtt.Domain/
   - LoggingService.cs        - 日志记录实现
   - InfrastructureServiceCollectionExtensions.cs - 基础设施DI注册
 
-ForkliftMqtt.Infrastructure/
-├── Messaging/
-│   ├── MqttSensorDataService.cs
-│   ├── MqttSettings.cs
-│   └── MqttClientFactory.cs
-├── Persistence/
-│   ├── DbContext/
-│   │   └── ForkliftDbContext.cs
-│   ├── EntityConfigurations/
-│   │   ├── ForkliftSensorConfiguration.cs
-│   │   └── SensorReadingConfiguration.cs
-│   └── Repositories/
-│       ├── SensorRepository.cs
-│       ├── SensorReadingRepository.cs
-│       └── ForkliftRepository.cs
-├── Serialization/
-│   ├── IJsonSerializer.cs
-│   └── SystemTextJsonSerializer.cs
-├── Logging/
-│   └── LoggingService.cs
-├── Extensions/
-│   └── InfrastructureServiceCollectionExtensions.cs
-└── ForkliftMqtt.Infrastructure.csproj
+ForkliftMqtt.Infrastructure/  
+├── Messaging/  
+│   ├── MqttSensorDataService.cs  
+│   ├── MqttSettings.cs  
+│   └── MqttClientFactory.cs  
+├── Persistence/  
+│   ├── DbContext/  
+│   │   └── ForkliftDbContext.cs  
+│   ├── EntityConfigurations/  
+│   │   ├── ForkliftSensorConfiguration.cs  
+│   │   └── SensorReadingConfiguration.cs  
+│   └── Repositories/  
+│       ├── SensorRepository.cs  
+│       ├── SensorReadingRepository.cs  
+│       └── ForkliftRepository.cs  
+├── Serialization/  
+│   ├── IJsonSerializer.cs  
+│   └── SystemTextJsonSerializer.cs  
+├── Logging/  
+│   └── LoggingService.cs  
+├── Extensions/  
+│   └── InfrastructureServiceCollectionExtensions.cs  
+└── ForkliftMqtt.Infrastructure.csproj  
 
