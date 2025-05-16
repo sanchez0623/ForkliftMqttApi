@@ -1,0 +1,34 @@
+﻿// ForkliftSensor.cs (领域实体)
+namespace ForkliftMqtt.Domain.Entities
+{
+    public class ForkliftSensor
+    {
+        public string Id { get; private set; }
+        public string ForkliftId { get; private set; }
+        public SensorType Type { get; private set; }
+        public string Location { get; private set; }
+        public Dictionary<string, object> Metadata { get; private set; }
+
+        private ForkliftSensor() { }
+
+        public ForkliftSensor(string id, string forkliftId, SensorType type, string location, Dictionary<string, object> metadata = null)
+        {
+            Id = id;
+            ForkliftId = forkliftId;
+            Type = type;
+            Location = location;
+            Metadata = metadata ?? new Dictionary<string, object>();
+        }
+    }
+
+    public enum SensorType
+    {
+        Temperature,
+        Humidity,
+        Proximity,
+        Pressure,
+        Acceleration,
+        Gps,
+        Battery
+    }
+}

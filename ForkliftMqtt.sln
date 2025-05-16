@@ -4,14 +4,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36109.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt", "ForkliftMqtt\ForkliftMqtt.csproj", "{47B83456-8C6D-4B10-9279-F740D029DFD3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A} = {CFECAA0B-7366-43C0-9541-7FB639D5DA6A}
+		{D5521963-A1A3-4F01-9886-1146480D34A9} = {D5521963-A1A3-4F01-9886-1146480D34A9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Application", "ForkliftMqtt.Application\ForkliftMqtt.Application.csproj", "{CFECAA0B-7366-43C0-9541-7FB639D5DA6A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD} = {35382CF1-931C-48F0-BB6F-CE72375F1DCD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Domain", "ForkliftMqtt.Domain\ForkliftMqtt.Domain.csproj", "{35382CF1-931C-48F0-BB6F-CE72375F1DCD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Infrastructure", "ForkliftMqtt.Infrastructure\ForkliftMqtt.Infrastructure.csproj", "{D5521963-A1A3-4F01-9886-1146480D34A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD} = {35382CF1-931C-48F0-BB6F-CE72375F1DCD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftMqtt.Tests", "ForkliftMqtt.Tests\ForkliftMqtt.Tests.csproj", "{B7D87B6E-1857-4B08-9540-34CFB76E412C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35382CF1-931C-48F0-BB6F-CE72375F1DCD} = {35382CF1-931C-48F0-BB6F-CE72375F1DCD}
+		{47B83456-8C6D-4B10-9279-F740D029DFD3} = {47B83456-8C6D-4B10-9279-F740D029DFD3}
+		{CFECAA0B-7366-43C0-9541-7FB639D5DA6A} = {CFECAA0B-7366-43C0-9541-7FB639D5DA6A}
+		{D5521963-A1A3-4F01-9886-1146480D34A9} = {D5521963-A1A3-4F01-9886-1146480D34A9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
