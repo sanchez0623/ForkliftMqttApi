@@ -82,31 +82,31 @@ ForkliftMqtt.Api/
   - Behaviors/             - MediatR管道行为
   - Validators/            - FluentValidation验证器
 
-ForkliftMqtt.Application/
-├── Services/
-│   ├── Interfaces/
-│   │   ├── ISensorApplicationService.cs
-│   │   └── IForkliftApplicationService.cs
-│   ├── SensorApplicationService.cs
-│   └── ForkliftApplicationService.cs
-├── DTOs/
-│   ├── ForkliftSensorDto.cs
-│   ├── SensorReadingDto.cs
-│   └── CommandResponseDto.cs
-├── Commands/
-│   ├── PublishSensorReadingCommand.cs
-│   └── MonitorSensorCommand.cs
-├── Queries/
-│   ├── GetSensorByIdQuery.cs
-│   └── GetAllSensorsQuery.cs
-├── Mapping/
-│   └── MappingProfile.cs
-├── Behaviors/
-│   └── ValidationBehavior.cs
-├── Validators/
-│   ├── PublishSensorReadingCommandValidator.cs
-│   └── MonitorSensorCommandValidator.cs
-└── ForkliftMqtt.Application.csproj
+ForkliftMqtt.Application/  
+├── Services/  
+│   ├── Interfaces/  
+│   │   ├── ISensorApplicationService.cs  
+│   │   └── IForkliftApplicationService.cs  
+│   ├── SensorApplicationService.cs  
+│   └── ForkliftApplicationService.cs  
+├── DTOs/  
+│   ├── ForkliftSensorDto.cs  
+│   ├── SensorReadingDto.cs  
+│   └── CommandResponseDto.cs  
+├── Commands/  
+│   ├── PublishSensorReadingCommand.cs  
+│   └── MonitorSensorCommand.cs  
+├── Queries/  
+│   ├── GetSensorByIdQuery.cs  
+│   └── GetAllSensorsQuery.cs  
+├── Mapping/  
+│   └── MappingProfile.cs  
+├── Behaviors/  
+│   └── ValidationBehavior.cs  
+├── Validators/  
+│   ├── PublishSensorReadingCommandValidator.cs  
+│   └── MonitorSensorCommandValidator.cs  
+└── ForkliftMqtt.Application.csproj  
 
 3. ForkliftMqtt.Domain
 
