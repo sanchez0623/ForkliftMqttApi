@@ -13,6 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ForkliftMqtt.Application\ForkliftMqtt.Application.csproj" />
+    <ProjectReference Include="..\ForkliftMqtt.Domain\ForkliftMqtt.Domain.csproj" />
+    <ProjectReference Include="..\ForkliftMqtt.Infrastructure\ForkliftMqtt.Infrastructure.csproj" />
+    <ProjectReference Include="..\ForkliftMqtt\ForkliftMqtt.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
