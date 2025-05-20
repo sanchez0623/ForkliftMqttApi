@@ -1,5 +1,6 @@
 using ForkliftMqtt.Application;
 using ForkliftMqtt.Infrastructure.Extensions;
+using ForkliftMqtt.Infrastructure.Persistence;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,6 +39,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    // 仅在开发环境中自动应用迁移
+    await DbInitializer.InitializeDatabaseAsync(app.Services);
 }
 
 app.UseHttpsRedirection();

@@ -1,12 +1,7 @@
 ﻿using ForkliftMqtt.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace ForkliftMqtt.Infrastructure.Persistence.EntityConfigurations
 {

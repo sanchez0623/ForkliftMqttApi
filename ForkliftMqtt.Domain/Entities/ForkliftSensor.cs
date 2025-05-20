@@ -1,4 +1,6 @@
 ﻿// ForkliftSensor.cs (领域实体)
+using System.Text.Json;
+
 namespace ForkliftMqtt.Domain.Entities
 {
     public class ForkliftSensor
@@ -18,6 +20,19 @@ namespace ForkliftMqtt.Domain.Entities
             Type = type;
             Location = location;
             Metadata = metadata ?? new Dictionary<string, object>();
+        }
+
+        // 添加工厂方法支持EF Core迁移
+        public static ForkliftSensor Create(string id, string forkliftId, SensorType type, string location, string metadata)
+        {
+            return new ForkliftSensor
+            {
+                Id = id,
+                ForkliftId = forkliftId,
+                Type = type,
+                Location = location,
+                Metadata = JsonSerializer.Deserialize<Dictionary<string, object>>(metadata) ?? new Dictionary<string, object>()
+            };
         }
     }
 
