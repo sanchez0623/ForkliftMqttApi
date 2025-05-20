@@ -27,10 +27,12 @@ namespace ForkliftMqtt.Infrastructure.Persistence.EntityConfigurations
                 .IsRequired();
 
             builder.Property(s => s.Metadata)
-                .HasConversion(
-                    v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
-                    v => JsonSerializer.Deserialize<Dictionary<string, object>>(v, new JsonSerializerOptions()) ?? new Dictionary<string, object>()
-                );
+                .HasMaxLength(2000);
+            //builder.Property(s => s.Metadata)
+            //    .HasConversion(
+            //        v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            //        v => JsonSerializer.Deserialize<Dictionary<string, object>>(v, new JsonSerializerOptions()) ?? new Dictionary<string, object>()
+            //    );
 
             builder.HasIndex(s => s.ForkliftId);
         }

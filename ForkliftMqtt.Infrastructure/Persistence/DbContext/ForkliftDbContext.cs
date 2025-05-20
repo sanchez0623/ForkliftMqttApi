@@ -30,7 +30,7 @@ namespace ForkliftMqtt.Infrastructure.Persistence.DbContext
             modelBuilder.ApplyConfiguration(new ForkliftConfiguration());
 
             // 添加种子数据
-            SeedData(modelBuilder); 
+            SeedData(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -45,7 +45,7 @@ namespace ForkliftMqtt.Infrastructure.Persistence.DbContext
                     Name = "叉车一号",
                     Model = "XC-2023",
                     Status = ForkliftStatus.Idle,
-                    LastMaintenanceDate = DateTime.UtcNow
+                    LastMaintenanceDate = new DateTime(2025, 5, 20)//DateTime.UtcNow
                 },
                 new
                 {
@@ -53,7 +53,7 @@ namespace ForkliftMqtt.Infrastructure.Persistence.DbContext
                     Name = "叉车二号",
                     Model = "XC-2023",
                     Status = ForkliftStatus.Working,
-                    LastMaintenanceDate = DateTime.UtcNow.AddDays(-30)
+                    LastMaintenanceDate = new DateTime(2025, 5, 20).AddDays(-30)//DateTime.UtcNow.AddDays(-30)
                 }
             );
 

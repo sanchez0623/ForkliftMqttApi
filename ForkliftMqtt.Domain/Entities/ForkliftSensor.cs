@@ -9,17 +9,17 @@ namespace ForkliftMqtt.Domain.Entities
         public string ForkliftId { get; private set; }
         public SensorType Type { get; private set; }
         public string Location { get; private set; }
-        public Dictionary<string, object> Metadata { get; private set; }
+        public string Metadata { get; private set; }
 
         private ForkliftSensor() { }
 
-        public ForkliftSensor(string id, string forkliftId, SensorType type, string location, Dictionary<string, object> metadata = null)
+        public ForkliftSensor(string id, string forkliftId, SensorType type, string location, string metadata = null)
         {
             Id = id;
             ForkliftId = forkliftId;
             Type = type;
             Location = location;
-            Metadata = metadata ?? new Dictionary<string, object>();
+            Metadata = metadata ?? string.Empty;
         }
 
         // 添加工厂方法支持EF Core迁移
@@ -31,7 +31,7 @@ namespace ForkliftMqtt.Domain.Entities
                 ForkliftId = forkliftId,
                 Type = type,
                 Location = location,
-                Metadata = JsonSerializer.Deserialize<Dictionary<string, object>>(metadata) ?? new Dictionary<string, object>()
+                Metadata = metadata ?? string.Empty
             };
         }
     }
